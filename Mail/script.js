@@ -31,6 +31,8 @@ const mailInput = document.getElementById('mail');
 const buttonCheck = document.getElementById('check-mail');
 const outputCheck = document.querySelector('.output-check');
 
+let hElement = document.createElement('h2');
+
 // EventListener click del button
 buttonCheck.addEventListener('click', function() {
   const mailValue = mailInput.value;
@@ -49,11 +51,21 @@ buttonCheck.addEventListener('click', function() {
   // condizione per verificare se il valore inserito nell'input è uguale a uno degli elementi inclusi nell'array
   if(mailArray.includes(mailValue) ){
     console.log('Accesso riuscito');
+    // * SOLUZIONE 1 con innerHTML (in questo caso la migliore)
     outputCheck.innerHTML = `Bentornato ${mailValue}`;
+    // * SOLUZIONE 2 con createElement + append
+    // let hElement = document.createElement('h2'); // dichiarata già in alto quindi qui non è necessaria
+    // hElement = `Bentornato ${mailValue}`;
+    // outputCheck.append(hElement);
   }
   else{
     console.log('Accesso negato');
+    // * SOLUZIONE 1 con innerHTML (in questo caso la migliore)
     outputCheck.innerHTML = `Accesso negato. L'email inserita non è corretta.`;
+    // * SOLUZIONE 2 con createElement + append
+    // let hElement = document.createElement('h2'); // dichiarata già in alto quindi qui non è necessaria
+    // hElement = `Accesso negato. L'email inserita non è corretta.`;
+    // outputCheck.append(hElement);
   }
 
 });
