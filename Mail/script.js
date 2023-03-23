@@ -11,13 +11,6 @@ stampa un messaggio appropriato sull’esito del controllo.
 - creare un array contente una lista di mail le quali possono accedere
 - creare una condizione if che si attiva al click di un button in modo da verificare se la mail inserita nell'input è uguale alla mail contenuta nell'array
 - creare un output
-
-## Esercizio 2
-
-**Gioco dei dadi**
-
-Generare un numero random da 1 a 6, sia per il giocatore sia per il computer.
-Stabilire il vincitore, in base a chi fa il punteggio più alto.
 */
 
 
@@ -43,7 +36,7 @@ buttonCheck.addEventListener('click', function() {
   const mailValue = mailInput.value;
   console.log(mailValue);
   
-  // * SOLUZIONE 1 TROPPO COMPLESSA
+  // * SOLUZIONE 1 senza array, TROPPO COMPLESSA 
   // mailValue == ('abc@gmail.com')||
   // mailValue == ('Michele@gmail.com')||
   // mailValue == ('Mario@gmail.com')||
@@ -64,38 +57,3 @@ buttonCheck.addEventListener('click', function() {
   }
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
